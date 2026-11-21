@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#650f19">
+  <meta name="description" content="《数学通报》创刊90周年纪念专题。赓续九秩，共赴新程；回望题词、主编、期刊封面与周年时光。">
+  <title>赓续九秩，共赴新程 —《数学通报》创刊90周年</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="designer-background.css">
+  <link rel="stylesheet" href="reference-components.css">
+  <link rel="stylesheet" href="revision.css">
+  <script src="content.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="anniversary-site">
+  <a class="skip-link" href="#celebration">跳至专题内容</a>
+  <header class="hero designer-hero" id="top">
+    <picture class="designer-hero-picture">
+      <source media="(max-width: 600px)" srcset="assets/designer-hero-960.webp">
+      <img src="assets/designer-hero-1920.webp" width="4688" height="2300" alt="" fetchpriority="high">
+    </picture>
+    <h1 class="sr-only">赓续九秩，共赴新程——《数学通报》创刊90周年</h1>
+    <a class="designer-home" href="https://shxtb.bnu.edu.cn/index.htm" target="_blank" rel="noopener noreferrer">↵ 返回首页</a>
+    <p class="masthead-topic">《数学通报》创刊90周年特别专题</p>
+  </header>
+
+  <div class="page-content">
+    <div class="editor-message container" id="editor-message">
+      <div class="editor-message-inner">
+        <div id="hero-description"></div>
+      </div>
+    </div>
+
+  <nav class="section-nav" aria-label="专题栏目">
+    <div class="container nav-inner">
+      <a class="active" href="#celebration">90周年庆典纪实</a>
+      <a href="#inscriptions">题词寄语/90周年</a>
+      <a href="#moments" hidden>光影九秩</a>
+      <a href="#covers">封面流年</a>
+      <a href="#editors">历任主编及顾问</a>
+      <a href="#history">庆典回望</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container" id="celebration" aria-labelledby="celebration-title">
+      <div class="section-intro"><h2 id="celebration-title">90周年庆典纪实</h2></div>
+      <article class="celebration-preview">
+        <a class="celebration-photo" href="celebration.html" aria-label="阅读90周年庆典纪实"><img id="report-cover" alt="发展论坛会场合影" width="1600" height="1066" loading="lazy"></a>
+        <div class="celebration-copy">
+          <h3 id="report-title"></h3>
+          <p id="report-subtitle"></p>
+          <p id="report-summary"></p>
+          <a class="article-link" href="celebration.html">阅读全文 <span aria-hidden="true">›</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section inscriptions-section container" id="inscriptions" aria-labelledby="inscriptions-title">
+      <div class="section-intro"><h2 id="inscriptions-title">题词寄语/90周年</h2></div>
+      <div class="reference-carousel" id="inscription-carousel" role="region" aria-roledescription="轮播" aria-labelledby="inscriptions-title">
+        <div class="carousel-stage"><div class="inscription-grid" id="inscription-grid"></div><button class="side-arrow previous" id="inscription-prev" aria-label="上一组题词寄语/90周年"><span aria-hidden="true">‹</span></button><button class="side-arrow next" id="inscription-next" aria-label="下一组题词寄语/90周年"><span aria-hidden="true">›</span></button></div>
+        <div class="gallery-dots" id="inscription-dots" role="group" aria-label="选择题词寄语/90周年展示组"></div>
+      </div>
+    </section>
+
+    <section class="section moments-section container" id="moments" aria-labelledby="moments-title" hidden>
+      <div class="section-intro"><h2 id="moments-title">光影九秩</h2></div>
+      <div class="photo-group" aria-labelledby="morning-title">
+        <h3 class="history-group-title" id="morning-title">上午</h3>
+        <div class="horizontal-gallery photo-gallery" id="morning-gallery" tabindex="0" aria-label="上午现场照片，左右滑动浏览"></div>
+        <input class="cover-scrollbar" id="morning-scrollbar" type="range" min="0" max="10000" value="0" step="1" aria-label="滑动浏览上午现场照片" aria-controls="morning-gallery">
+      </div>
+      <div class="photo-group" aria-labelledby="afternoon-title">
+        <h3 class="history-group-title" id="afternoon-title">下午</h3>
+        <div class="horizontal-gallery photo-gallery" id="afternoon-gallery" tabindex="0" aria-label="下午现场照片，左右滑动浏览"></div>
+        <input class="cover-scrollbar" id="afternoon-scrollbar" type="range" min="0" max="10000" value="0" step="1" aria-label="滑动浏览下午现场照片" aria-controls="afternoon-gallery">
+      </div>
+    </section>
+
+    <section class="section covers-section container" id="covers" aria-labelledby="covers-title">
+      <div class="section-intro"><h2 id="covers-title">封面流年</h2></div>
+      <div class="cover-slider" id="cover-carousel" role="region" aria-labelledby="covers-title">
+        <div class="cover-gallery horizontal-gallery" id="cover-gallery" tabindex="0" aria-label="封面流年，左右滑动浏览"></div>
+        <input class="cover-scrollbar" id="cover-scrollbar" type="range" min="0" max="10000" value="0" step="1" aria-label="滑动浏览封面" aria-controls="cover-gallery">
+      </div>
+    </section>
+
+    <section class="section editors-section container" id="editors" aria-labelledby="editors-title">
+      <div class="section-intro"><h2 id="editors-title">历任主编及顾问</h2></div>
+      <div class="reference-carousel" id="profile-carousel" role="region" aria-roledescription="轮播" aria-labelledby="editors-title">
+        <div class="carousel-stage"><div class="profile" id="profile" role="group" aria-roledescription="幻灯片"></div><button class="side-arrow previous" id="profile-prev" aria-label="上一组历任主编及顾问"><span aria-hidden="true">‹</span></button><button class="side-arrow next" id="profile-next" aria-label="下一组历任主编及顾问"><span aria-hidden="true">›</span></button></div>
+        <div class="gallery-dots" id="profile-dots" role="group" aria-label="选择历任主编及顾问展示组"></div>
+      </div>
+    </section>
+
+    <section class="section history-section container" id="history" aria-labelledby="history-title">
+      <div class="section-intro"><h2 id="history-title">庆典回望</h2></div>
+<div class="history-group" aria-labelledby="historyEarly-title"><h3 class="history-group-title" id="historyEarly-title">55周年 · 60周年</h3><div class="reference-carousel history-carousel" id="historyEarly-carousel" role="region" aria-roledescription="轮播" aria-labelledby="historyEarly-title"><div class="carousel-stage"><div class="inscription-grid history-grid" id="historyEarly-grid"></div><button class="side-arrow previous" id="historyEarly-prev" aria-label="上一组55周年 · 60周年"><span aria-hidden="true">‹</span></button><button class="side-arrow next" id="historyEarly-next" aria-label="下一组55周年 · 60周年"><span aria-hidden="true">›</span></button></div><div class="gallery-counter" id="historyEarly-dots" aria-live="polite"></div></div></div>
+<div class="history-group" aria-labelledby="historyLate-title"><h3 class="history-group-title" id="historyLate-title">70周年 · 80周年</h3><div class="reference-carousel history-carousel" id="historyLate-carousel" role="region" aria-roledescription="轮播" aria-labelledby="historyLate-title"><div class="carousel-stage"><div class="inscription-grid history-grid" id="historyLate-grid"></div><button class="side-arrow previous" id="historyLate-prev" aria-label="上一组70周年 · 80周年"><span aria-hidden="true">‹</span></button><button class="side-arrow next" id="historyLate-next" aria-label="下一组70周年 · 80周年"><span aria-hidden="true">›</span></button></div><div class="gallery-counter" id="historyLate-dots" aria-live="polite"></div></div></div>
+    </section>
+  </main>
+  </div>
+
+  <footer class="footer"><a class="footer-top-link" href="#top">返回顶部</a></footer>
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-top"><div><p id="lightbox-category"></p><h2 id="lightbox-title"></h2></div><button class="viewer-button" id="lightbox-close" aria-label="关闭大图">×</button></div>
+    <div class="lightbox-stage" id="lightbox-stage"><div class="zoom-surface" id="zoom-surface"></div></div>
+    <div class="lightbox-bottom"><button class="viewer-button" id="lightbox-prev" aria-label="上一张">←</button><span id="lightbox-counter"></span><button class="viewer-button" id="lightbox-next" aria-label="下一张">→</button><span class="viewer-divider"></span><button class="viewer-button" id="zoom-out" aria-label="缩小">−</button><button class="zoom-reset" id="zoom-reset" aria-label="恢复原始大小">100%</button><button class="viewer-button" id="zoom-in" aria-label="放大">＋</button></div>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </dialog>
+  <div class="sr-only" role="status" aria-live="polite" id="page-status"></div>
+  <noscript><p class="noscript-notice">请启用浏览器 JavaScript，以查看题词、封面和活动相册。</p></noscript>
+</body>
+</html>

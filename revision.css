@@ -1,0 +1,294 @@
+.anniversary-site .editor-message {
+  padding-block: clamp(24px, 4vw, 54px);
+}
+
+.anniversary-site .editor-message-inner {
+  max-width: 850px;
+  margin-inline: auto;
+  color: #f0d9ad;
+}
+
+.anniversary-site #hero-description p {
+  margin: 0 0 12px;
+  font: 400 clamp(14px, 1.5vw, 16px)/1.9 var(--sans);
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.anniversary-site .nav-inner {
+  justify-content: center;
+  padding-inline: 0;
+}
+
+.anniversary-site .nav-inner a {
+  justify-content: center;
+  padding-inline: clamp(10px, 2vw, 26px);
+  text-align: center;
+}
+
+.anniversary-site .celebration-preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 52px);
+  align-items: center;
+  padding: clamp(16px, 3vw, 36px);
+  border: 1px solid #d6ab6540;
+  background: linear-gradient(125deg, #6e1a1c90, #41080cd9);
+}
+
+.anniversary-site .celebration-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 5;
+  object-fit: cover;
+  border: 1px solid #d6ab654d;
+}
+
+.anniversary-site .celebration-copy h3 {
+  margin: 0 0 14px;
+  color: #f6daa0;
+  font: 700 clamp(19px, 2.2vw, 29px)/1.55 var(--serif);
+}
+
+.anniversary-site .celebration-copy p {
+  margin: 0 0 18px;
+  color: #ead3ad;
+  font: 400 15px/1.9 var(--sans);
+  text-align: justify;
+}
+
+.anniversary-site .article-link,
+.anniversary-site .article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding-inline: 16px;
+  border: 1px solid #d4ad6b82;
+  color: #f6daa0;
+  font: 600 14px/1.5 var(--sans);
+}
+
+.anniversary-site .article-link:hover,
+.anniversary-site .article-back:hover {
+  background: #a873352e;
+}
+
+.anniversary-site .photo-group + .photo-group {
+  margin-top: clamp(32px, 5vw, 58px);
+}
+
+.anniversary-site .photo-gallery {
+  display: flex;
+  gap: 18px;
+  overflow: auto hidden;
+  padding: 5px 0 9px;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  user-select: none;
+  cursor: grab;
+}
+
+.anniversary-site .photo-gallery::-webkit-scrollbar { display: none; }
+.anniversary-site .photo-gallery:focus-visible { outline: 1px solid #e1bd7a; }
+
+.anniversary-site .photo-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+  margin: 0;
+}
+
+.anniversary-site .photo-card button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid #cba76d55;
+  background: #38080a;
+  cursor: grab;
+}
+
+.anniversary-site .photo-gallery.is-dragging,
+.anniversary-site .photo-gallery.is-dragging button { cursor: grabbing; }
+
+.anniversary-site .photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  -webkit-user-drag: none;
+}
+
+.anniversary-site .profile-copy .profile-bio,
+.anniversary-site .profile-copy .profile-detail {
+  color: #ead3ad;
+  font: 400 clamp(13px, 1.35vw, 16px)/1.9 var(--sans);
+  letter-spacing: normal;
+  max-width: none;
+}
+
+.anniversary-site .profile-pair {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
+.anniversary-site .profile-group-title {
+  margin: 0;
+  color: #f0d49b;
+  text-align: center;
+  font: 700 clamp(21px, 3vw, 28px)/1.5 var(--brush);
+  letter-spacing: 1px;
+}
+
+.anniversary-site .profile-people {
+  display: grid;
+  gap: clamp(24px, 3vw, 38px);
+  padding: clamp(16px, 2.2vw, 28px);
+  border: 1px solid #d6ab6540;
+  background: #450b0e7a;
+}
+
+.anniversary-site .profile-person {
+  display: grid;
+  grid-template-columns: clamp(120px, 19vw, 176px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 3vw, 42px);
+}
+
+.anniversary-site .profile-person .profile-bio { margin: 0; }
+
+.anniversary-site .profile-image-close { overflow: hidden; }
+
+.anniversary-site .profile-image-close img {
+  object-position: 38% 50%;
+  transform: scale(1.27);
+  transform-origin: 50% 71%;
+}
+
+.anniversary-site .inscription-ink-mount,
+.anniversary-site .history-grid .provided-inscription {
+  background: #fff;
+}
+
+.anniversary-site .inscription-ink-mount {
+  --ink-height: clamp(280px, 39vw, 465px);
+  --ink-padding: clamp(12px, 2.2vw, 24px);
+  display: grid;
+  place-items: center;
+  padding: var(--ink-padding);
+}
+
+.anniversary-site .inscription-grid:not(.wide-item) .inscription-ink-mount {
+  height: calc(var(--ink-height) + 2 * var(--ink-padding));
+}
+
+.anniversary-site .inscription-ink-preview {
+  display: block;
+  width: min(100%, calc(var(--ink-height) * var(--ink-ratio)));
+  height: auto;
+  overflow: hidden;
+}
+
+.anniversary-site.report-page {
+  min-height: 100vh;
+  color: #f0d9b3;
+  background: radial-gradient(ellipse at top, #72151a, #3a080b 680px);
+}
+
+.anniversary-site.report-page::before { display: none; }
+
+.anniversary-site .celebration-article {
+  max-width: 890px;
+  margin-inline: auto;
+  padding: clamp(20px, 6vw, 62px) clamp(18px, 4vw, 44px);
+  background: transparent;
+}
+
+.anniversary-site .celebration-article article { margin-block: 32px 38px; }
+
+.anniversary-site .celebration-article h1 {
+  margin: 0 0 24px;
+  color: #f4d796;
+  font: 700 clamp(24px, 4vw, 38px)/1.45 var(--serif);
+  text-wrap: balance;
+}
+
+.anniversary-site .celebration-article h2 {
+  margin: 36px 0 14px;
+  color: #f4d796;
+  font: 700 clamp(18px, 2.8vw, 25px)/1.5 var(--serif);
+}
+
+.anniversary-site .celebration-article p {
+  margin: 0 0 16px;
+  font: 400 16px/1.95 var(--sans);
+  text-indent: 2em;
+  text-align: justify;
+}
+
+.anniversary-site .celebration-article .article-subtitle {
+  color: #e4c58e;
+  font: 500 clamp(16px, 2.5vw, 21px)/1.65 var(--serif);
+  text-indent: 0;
+}
+
+.anniversary-site .celebration-article .article-byline {
+  color: #e4c58e;
+  font-size: 14px;
+  text-indent: 0;
+}
+
+.anniversary-site .celebration-article .article-lead {
+  padding: 14px 18px;
+  border-inline-start: 2px solid #d4ad6b;
+  background: #d4ad6b14;
+}
+
+.anniversary-site .celebration-article figure { margin: 24px auto; }
+
+.anniversary-site .celebration-article img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.anniversary-site .celebration-article figcaption {
+  margin-top: 8px;
+  color: #e4c58e;
+  text-align: center;
+  font: 400 13px/1.6 var(--sans);
+}
+
+.anniversary-site .celebration-article p a { color: #ffe0a0; text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .anniversary-site .nav-inner {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0 4px;
+  }
+
+  .anniversary-site .nav-inner a {
+    justify-content: center;
+    min-height: 44px;
+    padding-inline: 4px;
+  }
+
+  .anniversary-site .section { scroll-margin-top: 100px; }
+  .anniversary-site .editor-message,
+  .anniversary-site #celebration,
+  .anniversary-site #moments { width: calc(100% - 36px); }
+  .anniversary-site .celebration-preview { grid-template-columns: minmax(0, 1fr); }
+  .anniversary-site .photo-card { flex-basis: 82%; }
+  .anniversary-site .photo-gallery { gap: 12px; }
+  .anniversary-site .profile-person { grid-template-columns: minmax(0, 1fr); }
+  .anniversary-site .profile-person .profile-image {
+    width: min(130px, 100%);
+    margin-inline: auto;
+  }
+  .anniversary-site .profile-person h4 { text-align: center; }
+}

@@ -1,0 +1,57 @@
+/* Original background supplied on 2026-10-17. Keep its colours and artwork intact. */
+:root { --wine: #500b0e; --deep: #40080b; }
+body { background: var(--wine); }
+body::before { display: none; }
+.hero.designer-hero { min-height: 0; background: none; overflow: visible; }
+.designer-hero::before, .designer-hero::after { display: none; }
+.designer-hero-picture, .designer-hero-picture img { display: block; width: 100%; }
+.designer-hero-picture img { height: auto; }
+.designer-hero .masthead-topic {
+  position: absolute;
+  top: 2%; left: 15%; width: 70%;
+  font-size: clamp(10px, 1.04vw, 17px);
+  line-height: 1.8; letter-spacing: clamp(1px, .38vw, 6px);
+  color: #d4b581; margin: 0;
+}
+.designer-home {
+  position: absolute; top: 2.4%; left: 3.1%; z-index: 1;
+  color: #e3c17e; font-size: clamp(10px, .83vw, 14px);
+  line-height: 1.8; padding: 3px 0;
+}
+.page-content {
+  position: relative;
+  background: url('assets/designer-body-1920.webp') center top / 100% 100% no-repeat;
+}
+.page-content > .hero-description {
+  position: absolute; bottom: calc(100% + 3.3vw); left: 17%;
+  width: 66%; max-width: none; margin: 0;
+  font-size: clamp(12px, 1vw, 16px); line-height: 1.9;
+  letter-spacing: .5px; color: #e5c59b;
+}
+main { background: transparent; }
+.section-nav {
+  background: rgba(66, 4, 8, .48);
+  border-color: rgba(228, 190, 131, .17);
+  backdrop-filter: blur(12px);
+}
+.editors-section, .moments-section { background: transparent; }
+.inscriptions-section::before { display: none; }
+.profile-image::before { background: #500b0e; }
+.footer {
+  background: url('assets/designer-footer-1920.webp') center / 100% 100% no-repeat;
+  padding-bottom: clamp(110px, 13vw, 230px);
+}
+.footer::before, .footer-ribbon { display: none; }
+@media (max-width: 800px) and (min-width: 601px) {
+  .page-content > .hero-description { bottom: calc(100% + 2.3vw); font-size: 11px; line-height: 1.6; }
+}
+@media (max-width: 600px) {
+  .designer-hero .masthead-topic { top: 3%; left: 8%; width: 84%; font-size: 10px; letter-spacing: 1px; }
+  .designer-home { top: 16%; left: 3%; font-size: 10px; padding: 5px 0; }
+  .page-content { background-image: url('assets/designer-body-960.webp'); }
+  .page-content > .hero-description {
+    position: static; width: auto; max-width: none; padding: 22px 24px 24px;
+    font-size: 12px; line-height: 2; letter-spacing: .3px; text-align: center;
+  }
+  .footer { background-image: url('assets/designer-footer-960.webp'); padding-bottom: 110px; }
+}
