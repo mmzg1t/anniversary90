@@ -125,6 +125,22 @@
   font: 400 clamp(13px, 1.35vw, 16px)/1.9 var(--sans);
   letter-spacing: normal;
   max-width: none;
+  text-align: justify;
+  text-align-last: start;
+}
+
+/* Historical photographs use their own proportions without a padded red mat. */
+.anniversary-site .direct-photo .exhibit-frame {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.anniversary-site .direct-photo .exhibit-frame::before,
+.anniversary-site .direct-photo .exhibit-frame::after { inset: 0; }
+.anniversary-site .history-grid .direct-photo .provided-inscription {
+  width: 100%;
+  height: auto;
+  background: transparent;
 }
 
 .anniversary-site .profile-pair {

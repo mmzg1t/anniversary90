@@ -62,7 +62,7 @@
   }
   function exhibitCard(item, group, index) {
     const art = item.previewInset ? inscriptionInkPreview(item) : inscriptionArt(item);
-    return `<figure class="exhibit-card"><button class="exhibit-button" data-gallery="${group}" data-index="${index}" aria-label="放大查看：${escape(item.title)}"><div class="exhibit-frame">${art}</div></button><figcaption class="inscription-caption">${escape(item.caption||item.author||'')}</figcaption></figure>`;
+    return `<figure class="exhibit-card${item.directPhoto ? ' direct-photo' : ''}"><button class="exhibit-button" data-gallery="${group}" data-index="${index}" aria-label="放大查看：${escape(item.title)}"><div class="exhibit-frame">${art}</div></button><figcaption class="inscription-caption">${escape(item.caption||item.author||'')}</figcaption></figure>`;
   }
   const galleries = {
     inscription: { items:data.inscriptions, size:()=>phone.matches?1:2, target:'#inscription-grid', label:'题词寄语', card:(item,i)=>exhibitCard(item,'inscriptions',i) },
@@ -162,7 +162,7 @@
     const item = state.viewerItems[state.viewerIndex];
     if (!item) return;
     $('#lightbox-title').textContent = item.title;
-    $('#lightbox-category').textContent = item.id?.startsWith('history-')?'庆典回望':{ inscription: '题词典藏', cover: '封面流年', photo: '光影九秩' }[item.type];
+    $('#lightbox-category').textContent = item.id?.startsWith('history-')?'岁月留珍':{ inscription: '题词典藏', cover: '封面流年', photo: '光影九秩' }[item.type];
     surface.innerHTML = item.type === 'inscription' ? inscriptionArt(item) : item.type === 'cover' ? coverArt(item) : item.image ? `<img src="${escape(item.image)}" alt="${escape(item.alt || item.title)}" draggable="false">` : placeholder('活动照片');
     $('#lightbox-counter').textContent = `${state.viewerIndex + 1} / ${state.viewerItems.length}`;
     $('#lightbox-caption').textContent = item.type === 'photo' ? `${item.subtitle}${item.demo ? ' · 图片待替换' : ''}` : `${item.author || item.subtitle || ''}${item.demo ? ' · 当前为版式示意' : ''}`;
